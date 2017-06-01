@@ -81,7 +81,7 @@ public class HeadAdapter extends RecyclerView.Adapter {
                 break;
             case 1:
                 ItemViewHolder itemViewHolder = (ItemViewHolder) holder;
-                if (position != 0 || (position + 2) != getItemCount()) {
+                if (position != 0 || (position + 1) != getItemCount()) {
                     Logger.d(position);
                     ImageLoader.getInstance().displayImage(mList.get(position - 1).getImage(), itemViewHolder.mImageView, ImageUtils.getOptions());
                     itemViewHolder.mTextView.setText(mList.get(position - 1).getText());
@@ -99,7 +99,7 @@ public class HeadAdapter extends RecyclerView.Adapter {
     public int getItemViewType(int position) {
         if (position == 0) {
             return TYPE_HEAD;
-        } else if (position + 2 == getItemCount()) {
+        } else if (position + 1 == getItemCount()) {
             return TYPE_FOOTER;
         } else {
             return TYPE_ITEM;

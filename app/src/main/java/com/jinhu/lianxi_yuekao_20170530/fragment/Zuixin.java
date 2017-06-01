@@ -84,7 +84,7 @@ public class Zuixin extends Fragment {
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
                 int lastVisibleItemPosition = mLayoutManager.findLastVisibleItemPosition();
-                if (lastVisibleItemPosition + 1 == mAdapter.getItemCount()) {
+                if (lastVisibleItemPosition + 2 == mAdapter.getItemCount()) {
 
                     boolean isRefreshing = swipe_refresh_layout.isRefreshing();
                     if (isRefreshing) {
