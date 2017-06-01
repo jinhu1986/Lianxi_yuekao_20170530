@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\anim\\abc_slide_out_top.xml"
+    }
+]
