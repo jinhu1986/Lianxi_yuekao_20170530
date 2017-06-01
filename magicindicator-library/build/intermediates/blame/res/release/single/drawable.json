@@ -116,12 +116,12 @@
         "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\drawable\\abc_ratingbar_indicator_material.xml"
     },
     {
-        "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\drawable\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\drawable\\abc_edit_text_material.xml"
-    },
-    {
         "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\drawable\\abc_btn_colored_material.xml",
         "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\drawable\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\jinhu\\.android\\build-cache\\029e703cbbf26094012c6870e2d78787dc664971\\output\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
         "merged": "C:\\AndroidStudioProjects\\Lianxi_yuekao_20170530\\magicindicator-library\\build\\intermediates\\res\\merged\\release\\drawable\\abc_list_selector_holo_dark.xml",

@@ -15,17 +15,13 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.jinhu.lianxi_yuekao_20170530.R;
-import com.jinhu.lianxi_yuekao_20170530.adapter.RvZxAdapter;
+import com.jinhu.lianxi_yuekao_20170530.adapter.HeadAdapter;
 import com.jinhu.lianxi_yuekao_20170530.bean.InfoBean;
 import com.jinhu.lianxi_yuekao_20170530.bean.ZuiXinBean;
 import com.jinhu.lianxi_yuekao_20170530.bean.ZuiXinMoreBean;
-import com.jinhu.lianxi_yuekao_20170530.util.GlideImageLoader;
 import com.jinhu.lianxi_yuekao_20170530.util.GsonUtils;
 import com.jinhu.lianxi_yuekao_20170530.util.HttpUtils;
 import com.jinhu.lianxi_yuekao_20170530.util.Url;
-import com.orhanobut.logger.Logger;
-import com.youth.banner.Banner;
-import com.youth.banner.BannerConfig;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,15 +33,13 @@ import java.util.List;
  */
 
 public class Zuixin extends Fragment {
-    private Banner banner;
     private RecyclerView recycler_main;
     private SwipeRefreshLayout swipe_refresh_layout;
     private Context mContext;
     private LinearLayoutManager mLayoutManager;
-    private RvZxAdapter mAdapter;
+    private HeadAdapter mAdapter;
     boolean isLoading;
     private List<InfoBean> mList = new ArrayList<InfoBean>();
-    ;
 
     @Nullable
     @Override
@@ -84,8 +78,6 @@ public class Zuixin extends Fragment {
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
                 Log.d("test", "StateChanged = " + newState);
-
-
             }
 
             @Override
@@ -93,7 +85,6 @@ public class Zuixin extends Fragment {
                 super.onScrolled(recyclerView, dx, dy);
                 int lastVisibleItemPosition = mLayoutManager.findLastVisibleItemPosition();
                 if (lastVisibleItemPosition + 1 == mAdapter.getItemCount()) {
-                    Log.d("test", "loading executed");
 
                     boolean isRefreshing = swipe_refresh_layout.isRefreshing();
                     if (isRefreshing) {
@@ -145,16 +136,13 @@ public class Zuixin extends Fragment {
                 ZuiXinBean zuiXinBean = GsonUtils.gsonToBean(result, ZuiXinBean.class);
                 List<ZuiXinBean.TopStoriesBean> top_stories = zuiXinBean.getTop_stories();
                 List<ZuiXinBean.StoriesBean> stories = zuiXinBean.getStories();
-                Logger.d(top_stories.size());
-                initBanner(top_stories);
-
                 for (int i = 0; i < stories.size(); i++) {
                     InfoBean infoBean = new InfoBean();
                     infoBean.setImage(stories.get(i).getImages().get(0));
                     infoBean.setText(stories.get(i).getTitle());
                     mList.add(infoBean);
                 }
-                initRv(mList);
+                initRv(mList, top_stories);
                 swipe_refresh_layout.setRefreshing(false);
             }
 
@@ -167,34 +155,14 @@ public class Zuixin extends Fragment {
 
     Handler mHandler = new Handler();
 
-    private void initRv(List<InfoBean> list) {
+    private void initRv(List<InfoBean> list, List<ZuiXinBean.TopStoriesBean> stories) {
         mLayoutManager = new LinearLayoutManager(mContext);
         recycler_main.setLayoutManager(mLayoutManager);
-        mAdapter = new RvZxAdapter(list, mContext);
+        mAdapter = new HeadAdapter(mContext, list, stories);
         recycler_main.setAdapter(mAdapter);
     }
 
-    private void initBanner(List<ZuiXinBean.TopStoriesBean> top_stories) {
-        List<String> images = new ArrayList<>();
-        List<String> titles = new ArrayList<>();
-        for (int i = 0; i < top_stories.size(); i++) {
-            images.add(top_stories.get(i).getImage());
-            titles.add(top_stories.get(i).getTitle());
-        }
-        //设置banner样式
-        banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE);
-        //设置图片加载器
-        banner.setImageLoader(new GlideImageLoader());
-        //设置图片集合
-        banner.setImages(images);
-        //设置标题集合（当banner样式有显示title时）
-        banner.setBannerTitles(titles);
-        //banner设置方法全部调用完毕时最后调用
-        banner.start();
-    }
-
     private void initView(View view) {
-        banner = (Banner) view.findViewById(R.id.banner);
         recycler_main = (RecyclerView) view.findViewById(R.id.recycler_main);
         swipe_refresh_layout = (SwipeRefreshLayout) view.findViewById(R.id.swipe_refresh_layout);
         swipe_refresh_layout.post(new Runnable() {
